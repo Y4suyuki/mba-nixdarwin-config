@@ -26,6 +26,8 @@
   environment = {
     shells = [ pkgs.fish ];
     variables.LANG = "en_US.UTF-8";
+    variables.EDITOR = "vim";
+    variables.VISUAL = "vim";
   };
 
   users.users.kamiishiyasuyuki = {
@@ -47,9 +49,18 @@
       fzf
       starship
       nerdfonts
+      stow
     ];
 
+    programs.tmux = {
+      enable = true;
+    };
+
     programs.emacs = {
+      enable = true;
+    };
+
+    programs.neovim = {
       enable = true;
     };
 
@@ -57,6 +68,14 @@
       enable = true;
       userName = "Yasuyuki Ageishi";
       userEmail = "y4suyuki@pm.me";
+      aliases = {
+        co = "checkout";
+        pl = "pull";
+      };
+    };
+
+    programs.gh = {
+      enable = true;
     };
 
     programs.alacritty = {
@@ -74,12 +93,17 @@
     programs.fish = {
       enable = true;
       shellAliases = {
-        v = "vim";
+        v = "nvim";
+        vi = "nvim";
       };
       shellAbbrs = {
         l = "less";
+        gs = "git status";
+        gd = "git diff";
       };
       interactiveShellInit = ''
+      . "$HOME/.asdf/asdf.fish"
+      . "$HOME/.asdf/completions/asdf.fish"
       starship init fish | source 
       '';
     };
