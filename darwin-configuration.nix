@@ -100,6 +100,8 @@
         l = "less";
         gs = "git status";
         gd = "git diff";
+	gg = "git log --oneline --graph --all --decorate";
+	ga = "git add";
       };
       interactiveShellInit = ''
       . "$HOME/.asdf/asdf.fish"
