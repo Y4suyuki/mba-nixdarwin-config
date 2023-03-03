@@ -50,6 +50,7 @@
       starship
       nerdfonts
       stow
+      rustup
     ];
 
     programs.tmux = {
@@ -104,6 +105,7 @@
 	ga = "git add";
       };
       interactiveShellInit = ''
+      fish_vi_key_bindings
       . "$HOME/.asdf/asdf.fish"
       . "$HOME/.asdf/completions/asdf.fish"
       starship init fish | source 
