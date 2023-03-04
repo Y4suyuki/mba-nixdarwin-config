@@ -68,7 +68,7 @@
     programs.git = {
       enable = true;
       userName = "Yasuyuki Ageishi";
-      userEmail = "y4suyuki@pm.me";
+      userEmail = "y4suyuki@protonmail.com";
       aliases = {
         co = "checkout";
         pl = "pull";
