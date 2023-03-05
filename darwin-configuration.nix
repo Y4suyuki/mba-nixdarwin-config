@@ -7,6 +7,7 @@
   environment.systemPackages =
     [ 
       pkgs.vim
+      pkgs.coreutils
     ];
 
   imports = [ <home-manager/nix-darwin> ];
