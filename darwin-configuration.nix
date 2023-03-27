@@ -76,10 +76,6 @@
       };
     };
 
-    programs.go = {
-      enable = true;
-    };
-
     programs.gh = {
       enable = true;
     };
@@ -111,7 +107,6 @@
       };
       interactiveShellInit = ''
       fish_add_path $HOME/.cargo/bin
-      fish_add_path $HOME/go/bin
       fish_vi_key_bindings
       . "$HOME/.asdf/asdf.fish"
       . "$HOME/.asdf/completions/asdf.fish"
