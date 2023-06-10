@@ -52,6 +52,12 @@
       nerdfonts
       stow
       rustup
+      rust-analyzer
+      jq
+      gitui
+      tree
+      libtool
+      graphviz
     ];
 
     programs.tmux = {
@@ -107,6 +113,7 @@
       };
       interactiveShellInit = ''
       fish_add_path $HOME/.cargo/bin
+      fish_add_path $HOME/google-cloud-sdk/bin
       fish_vi_key_bindings
       . "$HOME/.asdf/asdf.fish"
       . "$HOME/.asdf/completions/asdf.fish"
