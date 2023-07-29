@@ -105,6 +105,7 @@
       shellAliases = {
         v = "nvim";
         vi = "nvim";
+	sv = "source venv/bin/activate.fish";
       };
       shellAbbrs = {
         l = "less";
