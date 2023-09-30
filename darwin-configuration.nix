@@ -8,6 +8,9 @@
     [ 
       pkgs.vim
       pkgs.coreutils
+      pkgs.llvm
+      pkgs.bear
+      pkgs.emacs
     ];
 
   imports = [ <home-manager/nix-darwin> ];
@@ -66,10 +69,6 @@
       enable = true;
     };
 
-    programs.emacs = {
-      enable = true;
-    };
-
     programs.neovim = {
       enable = true;
     };
@@ -123,6 +122,17 @@
       . "$HOME/.asdf/completions/asdf.fish"
       starship init fish | source 
       '';
+      plugins = [
+        {
+	  name = "z";
+	  src = pkgs.fetchFromGitHub {
+	    owner = "jethrokuan";
+	    repo = "z";
+	    rev = "85f863f20f24faf675827fb00f3a4e15c7838d76";
+	    sha256 = null;
+	  };
+        }
+      ];
     };
 
     fonts.fontconfig.enable = true;
