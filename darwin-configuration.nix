@@ -11,6 +11,7 @@
       pkgs.llvm
       pkgs.bear
       pkgs.emacs
+      pkgs.awscli2
     ];
 
   imports = [ <home-manager/nix-darwin> ];
@@ -55,7 +56,6 @@
       nerdfonts
       stow
       rustup
-      rust-analyzer
       jq
       gitui
       tree
@@ -63,6 +63,7 @@
       graphviz
       imagemagick
       ffmpeg
+      htop
     ];
 
     programs.tmux = {
